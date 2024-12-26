@@ -19,15 +19,15 @@ export function Step1({ show, data, onUpdate }: StepProps) {
           <InfoCircle className="h-4 w-4 text-foreground" />
         </div>
         <div className="relative">
+          <span className="absolute left-3 top-2">$</span>
           <Input
             id="monthlySpend"
             type="number"
             value={data.monthlySpend}
             onChange={(e) => onUpdate('monthlySpend', e.target.value)}
-            className="pr-6"
+            className="pl-6 text-md"
             required
           />
-          <span className="absolute right-3 top-2.5">$</span>
         </div>
       </div>
     </div>
