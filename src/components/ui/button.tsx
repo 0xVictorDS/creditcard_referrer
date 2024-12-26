@@ -19,7 +19,7 @@ const buttonVariants = cva(
         sm: 'h-9 rounded-md px-3',
       },
       variant: {
-        default: 'bg-btn text-white',
+        default: 'bg-btn text-white border-btn',
       },
     },
   }

@@ -8,7 +8,7 @@ export function Step1({ show, data, onUpdate }: StepProps) {
     <div className={`w-full h-full transition-all duration-1000 ${show ? 'block' : 'hidden'}`}>
       <div className="space-y-4">
         <div className="flex items-center gap-2">
-          <Label className="text-foreground font-semibold text-base">
+          <Label className="text-foreground font-semibold text-base text-center mobile:text-left">
             1&nbsp;&nbsp;How much do you spend (or expect to spend) per month?*
           </Label>
         </div>

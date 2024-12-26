@@ -92,9 +92,9 @@ export default function CreditCardWizard() {
         
       </main>
 
-      <footer className="flex flex-row justify-end gap-2 ">
+      <footer className="flex flex-row justify-center gap-2 mobile:justify-end items-center">
         <div className="flex flex-row gap-2 w-fit">
-          <Button onClick={handleBack} className={`font-bold w-40 bg-transparent border border-[#4285F4]  text-[#4285F4]`} disabled={currentStep === 1}>
+          <Button onClick={handleBack} className={`font-bold w-40 bg-transparent border border-btn  text-[#4285F4] active:text-[#4286f4a0]`} disabled={currentStep === 1}>
             <ArrowLeftIcon className="w-4 h-4" /> &nbsp;Back
           </Button>
           <Button onClick={handleNext} className={`font-bold w-40 ml-auto`} disabled={currentStep === TOTAL_STEPS}>

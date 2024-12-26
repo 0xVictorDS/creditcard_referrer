@@ -26,10 +26,18 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.bg-btn {
+.bg-btn{
   background-color: #4285F4;
 }
 
-.bg-btn:hover {
+.bg-btn:active{
   background-color: #4286f4a0;
+}
+
+.border-btn{
+  border-color: #4285F4;
+}
+
+.border-btn:active{
+  border-color: #4286f4a0;
 }
