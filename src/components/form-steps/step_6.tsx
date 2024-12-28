@@ -9,7 +9,7 @@ export function Step6({ show, data, onUpdate }: StepProps) {
       <div className="space-y-4">
         <div className="flex items-center gap-2">
           <Label className="text-foreground font-semibold text-base text-center mobile:text-left">
-            6&nbsp;&nbsp;Do you plan to travel internationally?*
+            Do you plan to travel internationally?*
           </Label>
         </div>
         <div className="flex flex-row gap-3 items-center ">

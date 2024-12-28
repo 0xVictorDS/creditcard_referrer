@@ -9,7 +9,7 @@ export function Step4({ show, data, onUpdate }: StepProps) {
       <div className="space-y-4">
         <div className="flex items-center gap-2">
           <Label className="text-foreground font-semibold text-base text-center mobile:text-left">
-            4&nbsp;&nbsp;Do you prefer cards with an annual fee or no annual fee?*
+            Do you prefer cards with an annual fee or no annual fee?*
           </Label>
         </div>
         <div className="flex flex-row gap-3 items-center">

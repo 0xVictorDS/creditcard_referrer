@@ -9,7 +9,7 @@ export function Step3({ show, data, onUpdate }: StepProps) {
       <div className="space-y-4">
         <div className="flex items-center gap-2">
           <Label className="text-foreground font-semibold text-base text-center mobile:text-left">
-            3&nbsp;&nbsp;Do you prefer cash back, points, or miles?*
+            Do you prefer cash back, points, or miles?*
           </Label>
         </div>
         <div className="flex flex-row gap-3 items-center">

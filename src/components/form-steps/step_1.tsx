@@ -9,7 +9,7 @@ export function Step1({ show, data, onUpdate }: StepProps) {
       <div className="space-y-4">
         <div className="flex items-center gap-2">
           <Label className="text-foreground font-semibold text-base text-center mobile:text-left">
-            1&nbsp;&nbsp;How much do you spend (or expect to spend) per month?*
+            How much do you spend (or expect to spend) per month?*
           </Label>
         </div>
         <div className="flex flex-row gap-3 items-center">
