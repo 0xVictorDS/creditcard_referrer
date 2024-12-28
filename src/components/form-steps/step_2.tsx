@@ -8,8 +8,8 @@ export function Step2({ show, data, onUpdate }: StepProps) {
     <div className={`w-full h-full transition-all duration-1000 ${show ? 'block' : 'hidden'}`}>
       <div className="space-y-4">
         <div className="flex items-center gap-2">
-          <Label className="text-foreground font-semibold text-base text-center mobile:text-left">
-            How many personal credit cards have you applied for in the last 2 years?*
+          <Label className="text-foreground font-semibold text-base mobile:text-left after:content-['*'] after:text-red-500 after:ml-1 last-line-center">
+            How many personal credit cards have you applied for in the last 2 years?
           </Label>
         </div>
         <div className="flex flex-row gap-3 items-center">
@@ -33,7 +33,7 @@ export function Step2({ show, data, onUpdate }: StepProps) {
             ))}
           </SelectContent>
         </Select>
-        <p className={`text-sm ${parseInt(data.cardCount) >= 5 ? 'text-red-500' : 'text-transparent'} text-center mobile:text-left`}>
+        <p className={`text-sm last-line-center ${parseInt(data.cardCount) >= 5 ? 'text-red-500' : 'text-transparent'} text-center mobile:text-left`}>
           Please note: Based on Chase&apos;s application rules, your approval odds for a Chase-branded credit card may be affected if you have applied for 5 or more credit cards in the last 24 months.
         </p>
       </div>

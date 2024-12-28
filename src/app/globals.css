@@ -41,3 +41,8 @@ input::-webkit-inner-spin-button {
 .border-btn:active{
   border-color: #4286f4a0;
 }
+
+.last-line-center{
+  text-align: justify;
+  text-align-last: center;
+}
