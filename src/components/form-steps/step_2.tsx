@@ -33,7 +33,7 @@ export function Step2({ show, data, onUpdate }: StepProps) {
             ))}
           </SelectContent>
         </Select>
-        <p className={`text-sm ${parseInt(data.cardCount) >= 5 ? 'text-red-500' : 'text-transparent'}`}>
+        <p className={`text-sm ${parseInt(data.cardCount) >= 5 ? 'text-red-500' : 'text-transparent'} text-center mobile:text-left`}>
           Please note: Based on Chase&apos;s application rules, your approval odds for a Chase-branded credit card may be affected if you have applied for 5 or more credit cards in the last 24 months.
         </p>
       </div>

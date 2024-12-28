@@ -24,6 +24,7 @@ export default function CreditCardWizard() {
     isFreelancer: '',
     travelPlans: ''
   })
+  console.log("formData", formData)
 
   const handleUpdate = (key: keyof FormData, value: string) => {
     setFormData(prev => ({ ...prev, [key]: value }))
@@ -40,6 +41,35 @@ export default function CreditCardWizard() {
       setCurrentStep(prev => prev - 1)
     }
   }
+
+  const isNextDisabled = () => {
+    if(currentStep === 1 && formData.monthlySpend === '') {
+      console.log('1-true')
+      return true
+    }
+    if(currentStep === 2 && formData.cardCount === '') {
+      console.log('2-true')
+      return true
+    }
+    if(currentStep === 3 && formData.rewardType === '') {
+      console.log('3-true')
+      return true
+    }
+    if(currentStep === 4 && formData.annualFee === '') {
+      console.log('4-true')
+      return true
+    }
+    if(currentStep === 5 && formData.isFreelancer === '') {
+      console.log('5-true')
+      return true
+    }
+    if(currentStep === 6 && formData.travelPlans === '') {
+      console.log('6-true')
+      return true
+    }
+    console.log(currentStep, 'false')
+    return false
+  } 
 
   return (
     <div className="p-6 h-4/5 w-4/5 flex flex-col justify-between gap-8">
@@ -97,8 +127,8 @@ export default function CreditCardWizard() {
           <Button onClick={handleBack} className={`font-bold w-40 bg-transparent border border-btn  text-[#4285F4] active:text-[#4286f4a0]`} disabled={currentStep === 1}>
             <ArrowLeftIcon className="w-4 h-4" /> &nbsp;Back
           </Button>
-          <Button onClick={handleNext} className={`font-bold w-40 ml-auto`} disabled={currentStep === TOTAL_STEPS}>
-            Next&nbsp;<ArrowRightIcon className="w-4 h-4" />
+          <Button onClick={handleNext} className={`font-bold w-40 ml-auto`} disabled={isNextDisabled()}>
+            {currentStep === TOTAL_STEPS ? 'Submit' : `Next`}<ArrowRightIcon className="w-4 h-4" />
           </Button>
         </div>
       </footer>
