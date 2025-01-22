@@ -14,6 +14,7 @@ import { CardData, type FormData } from '@/components/types/form'
 import { Button } from '@/components/ui/button'
 import {PuffLoader} from "react-spinners";
 import { ArrowLeftIcon, ArrowRightIcon } from 'lucide-react'
+import backendURL from '../utility/backendUrl'
 import axios from 'axios'
 
 const TOTAL_STEPS = 7
@@ -83,7 +84,7 @@ export default function CreditCardWizard() {
     const isFreelancer = selection.findIndex(option => option === formData.isFreelancer);
     const isTravelNeeded = selection.findIndex(option => option === formData.travelPlans);
     const creditScore = creditScoreList.findIndex(option => option === formData.creditScore);
-    const cardList: Array<CardData> = await axios.get("http://localhost:3647/api/v1/check_card", {
+    const cardList: Array<CardData> = await axios.get(`${backendURL}/api/v1/check_card`, {
       params: {
         monthlySpend: monthlySpend,
         cardCount: cardCount,
