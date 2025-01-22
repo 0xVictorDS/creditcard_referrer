@@ -1,6 +1,23 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  images: {
+    domains:['localhost', '127.0.0.1', 'creditcard-referrer.vercel.app', 'github.com', ],
+    remotePatterns: [
+      {
+        hostname:'creditcard-referrer.vercel.app',
+        pathname: '/**',
+        port: '',
+        protocol: 'https'
+      },
+      {
+        hostname: 'rewardsccapi.blob.core.windows.net',
+        pathname: '/**',
+        port: '',
+        protocol: 'https'
+      }
+    ]
+  }
   // async headers() {
   //   return [
   //     {

@@ -29,8 +29,8 @@ export function Step8({ show, data}: {
       {visibleItems.map((item) => 
         (
           <Link key={item.cardKey} href={item.cardSignUrl} className="flex flex-row justify-stretch gap-x-5 items-center h-24 w-4/5 card-shade" target="_blank">
-            <img src={item.cardIconUrl} alt={"Card Image"} className="h-full"/>
-            <h2 className="text-2xl">{item.cardName}</h2>
+            <img loading="lazy" src={item.cardIconUrl} alt={"Card Image"} className="h-full w-fit" width={640} height={400}/>
+            <h2 className="text-xl">{item.cardName}</h2>
           </Link>
         )
       )}
