@@ -47,12 +47,17 @@ input::-webkit-inner-spin-button {
   text-align-last: center;
 }
 
-@keyframes flowRight {
+.card-shade {
+  transition: all 0.3s ease-in-out;
+  animation: shade 0.3s ease-in-out;
+}
+
+@keyframes shade {
   from {
-    transform: translateX(-100%);
+    opacity: 0;
   }
   to {
-    transform: translateX(0);
+    opacity: 1;
   }
 }
 

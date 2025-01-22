@@ -111,7 +111,7 @@ export default function CreditCardWizard() {
           <ProgressDots totalSteps={TOTAL_STEPS} currentStep={currentStep} />
         </header>
 
-        <main className="bg-white border border-[#0000001A] rounded-xl p-6 w-full h-full transition-all duration-1000 shadow-md relative"> 
+        <main className="bg-white border border-[#0000001A] rounded-xl p-6 pb-28 w-full h-full transition-all duration-1000 shadow-md relative overflow-y-auto"> 
           
           <Step1
             show={currentStep === 1}
