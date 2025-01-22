@@ -46,3 +46,43 @@ input::-webkit-inner-spin-button {
   text-align: justify;
   text-align-last: center;
 }
+
+@keyframes flowRight {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes flowLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-flow-right::before {
+  animation: flowRight 0.7s ease-out;
+}
+
+.animate-flow-left::before {
+  animation: flowLeft 0.7s ease-out;
+}
+
+.gradient-text {
+  background-image: linear-gradient(to right, #06b6d4, #3b82f6); /* From cyan-400 to blue-500 */
+  -webkit-background-clip: text; /* For WebKit browsers */
+  background-clip: text; /* Standard syntax */
+  color: transparent; /* Make text transparent to show gradient */
+}
+
+.gradient-arrow {
+  background: linear-gradient(to right, #06b6d4, #3b82f6); /* From cyan-400 to blue-500 */
+  -webkit-background-clip: text; /* For WebKit browsers */
+  background-clip: text; /* Standard syntax */
+  color: transparent; /* Make text transparent to show gradient */
+}

@@ -1,16 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { lexend } from "./ui/font";
 
 export const metadata: Metadata = {
   title: "Credit Card",
@@ -25,10 +15,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${lexend.className} antialiased`}
       >
-        <div className="w-screen h-screen flex justify-center items-center">
+        <div className="z-50 w-screen h-screen flex justify-center items-center">
           {children}
+        </div>
+        <div className="-z-10 absolute w-screen h-screen flex justify-center items-center bg-no-repeat bg-[url(/Image/background.png)] bg-contain blur-2xl opacity-40 top-0 left-0">
         </div>
       </body>
     </html>

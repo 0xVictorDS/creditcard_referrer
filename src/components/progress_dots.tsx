@@ -10,7 +10,7 @@ interface ProgressDotsProps {
           <div
             key={index}
             className={`h-1 w-full rounded-full transition-colors duration-1000 ${
-              index <= currentStep - 1 ? 'bg-blue-500' : 'bg-gray-200'
+              index <= currentStep - 1 ? 'bg-gradient-to-r from-cyan-400 to-blue-500' : 'bg-gray-200'
             }`}
           />
         ))}

@@ -5,6 +5,7 @@ export type FormData = {
     annualFee: 'no' | 'yes' | '';
     isFreelancer: 'yes' | 'no' | '';
     travelPlans: 'yes' | 'no' | '';
+    creditScore: string;
   }
   
   export type StepProps = {
@@ -13,4 +14,12 @@ export type FormData = {
     onUpdate: (key: keyof FormData, value: string) => void;
   }
   
+  export type CardData = {
+    cardName: string,
+    cardIssuer: string,
+    cardKey: string,
+    cardIconUrl: string,
+    cardSignUrl: string,
+    isReferralUrl: boolean
+  }
   
