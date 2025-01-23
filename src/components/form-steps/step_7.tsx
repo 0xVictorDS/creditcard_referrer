@@ -8,8 +8,8 @@ export function Step7({ show, data, onUpdate }: StepProps) {
     <div className={`w-full h-full transition-all duration-1000 ${show ? 'block' : 'hidden'}`}>
       <div className="space-y-4">
         <div className="flex items-center gap-2">
-          <Label className="text-foreground font-semibold text-base mobile:text-left after:content-['*'] after:text-red-500 after:ml-1 last-line-center">
-            What is your expected credit score?
+          <Label className="text-foreground font-semibold text-base desktop:text-left after:content-['*'] after:text-red-500 after:ml-1 last-line-center">
+            What is your approximate credit score range?
           </Label>
         </div>
         <div className="flex flex-row gap-3 items-center ">
@@ -26,11 +26,11 @@ export function Step7({ show, data, onUpdate }: StepProps) {
             <SelectValue className="text-red-500 placeholder:text-red-900" placeholder="Select" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value='excellent'>Excellent</SelectItem>
-            <SelectItem value='Very Good'>Very Good</SelectItem>
-            <SelectItem value='Good'>Good</SelectItem>
-            <SelectItem value='Fair'>Fair</SelectItem>
-            <SelectItem value='Poor'>Poor</SelectItem>
+            <SelectItem value='excellent'>Excellent (781 ~ 850)</SelectItem>
+            <SelectItem value='Very Good'>Very Good (661 ~ 780)</SelectItem>
+            <SelectItem value='Good'>Good (601 ~ 660)</SelectItem>
+            <SelectItem value='Fair'>Fair (500 ~ 600)</SelectItem>
+            <SelectItem value='Poor'>Poor (300 ~ 499)</SelectItem>
           </SelectContent>
         </Select>
       </div>

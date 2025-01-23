@@ -5,7 +5,7 @@ interface ProgressDotsProps {
   
   export function ProgressDots({ totalSteps, currentStep }: ProgressDotsProps) {
     return (
-      <div className="flex gap-2  w-full items-center">
+      <div className="flex gap-2 w-full items-center">
         {Array.from({ length: totalSteps }).map((_, index) => (
           <div
             key={index}

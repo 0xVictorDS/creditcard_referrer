@@ -61,12 +61,17 @@ input::-webkit-inner-spin-button {
   }
 }
 
-@keyframes flowLeft {
-  from {
+.animate-marquee {
+  transition: all 10s linear;
+  animation: text-flow 30s linear infinite;
+}
+
+@keyframes text-flow {
+  0% {
     transform: translateX(100%);
   }
-  to {
-    transform: translateX(0);
+  100% {
+    transform: translateX(-300%);
   }
 }
 
