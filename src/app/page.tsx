@@ -103,7 +103,7 @@ export default function CreditCardWizard() {
   }
 
   return (
-    <div className={`p-6 h-full max-h-screen w-4/5 flex flex-col pb-16 ${isLoading ? "justify-center items-center" : "justify-between"} gap-8`}>
+    <div className={`p-6 h-full max-h-screen w-full desktop:w-4/5 flex flex-col ${isLoading ? "justify-center items-center" : "justify-between"} gap-8`}>
       {isLoading ? <PuffLoader size={200} color='blue'/> :
         <>
         <header className="flex flex-col justify-center gap-8">
@@ -127,7 +127,7 @@ export default function CreditCardWizard() {
           }
         </header>
 
-        <main className="bg-white border border-[#0000001A] rounded-xl p-6 w-full h-full transition-all duration-1000 shadow-md relative over-y overflow-auto min-h-[150px]"> 
+        <main className="bg-white border border-[#0000001A] rounded-xl p-6 w-full h-full transition-all duration-1000 shadow-md relative over-y overflow-auto min-h-[200px]"> 
           
           <Step1
             show={currentStep === 1}
@@ -178,7 +178,19 @@ export default function CreditCardWizard() {
           
         </main>
         <footer className='flex flex-col gap-3'>
-          <div className="flex flex-row justify-center gap-2 desktop:justify-end items-center right-6 bottom-10">
+          {currentStep == 8 && 
+            <>
+              <div className="flex flex-col gap-3  w-full overflow-x-hidden">
+                <Label className="text-foreground font-semibold text-xs desktop:text-sm text-justify">  
+                  The recommendations provided are for informational purposes only and do not constitute financial advice. Approval for any credit card is subject to the issuing bank&apos;s evaluation and criteria, and we cannot guarantee approval. Please review the terms and conditions of each card carefully before applying. 
+                </Label>
+                <Label className="text-foreground font-semibold text-xs desktop:text-sm text-justify">  
+                  If you are approved for a card through one of our links, we may earn a commission. This does not influence our recommendations, which are based solely on your preferences and spending habits.
+                </Label>
+              </div>
+            </>
+          }
+          <div className="flex flex-row justify-center gap-2 desktop:justify-end items-center mb-6">
             <div className="flex flex-row gap-2 w-fit">
               <Button onClick={handleBack} className={`font-bold h-9 w-fit desktop:h-14 desktop:w-36 bg-transparent gradient-text active:text-[#4286f4a0]`} disabled={currentStep === 1}>
                 <ArrowLeftIcon className="w-4 h-4" color='#06b6d4' /> &nbsp;Back
@@ -190,11 +202,6 @@ export default function CreditCardWizard() {
                 Return
               </Button>
             </div>
-          </div>
-          <div className="flex flex-col gap-3  w-full overflow-x-hidden">
-            <Label className="text-foreground font-semibold text-[10px] desktop:text-sm text-justify whitespace-nowrap  animate-marquee">  
-            The recommendations provided are for informational purposes only and do not constitute financial advice. Approval for any credit card is subject to the issuing bank&apos;s evaluation and criteria, and we cannot guarantee approval. Please review the terms and conditions of each card carefully before applying. If you are approved for a card through one of our links, we may earn a commission. This does not influence our recommendations, which are based solely on your preferences and spending habits.
-            </Label>
           </div>
         </footer>
       </>

@@ -43,7 +43,7 @@ input::-webkit-inner-spin-button {
 }
 
 .last-line-center{
-  text-align: justify;
+  text-align: center;
   text-align-last: center;
 }
 
@@ -96,3 +96,7 @@ input::-webkit-inner-spin-button {
   background-clip: text; /* Standard syntax */
   color: transparent; /* Make text transparent to show gradient */
 }
+ Label {
+  letter-spacing: -0.05rem;
+  word-spacing: -0.05rem;
+ }

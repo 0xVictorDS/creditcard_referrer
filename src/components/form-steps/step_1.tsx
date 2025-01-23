@@ -25,7 +25,7 @@ export function Step1({ show, data, onUpdate }: StepProps) {
             type="number"
             value={data.monthlySpend}
             onChange={(e) => onUpdate('monthlySpend', e.target.value)}
-            className="pl-6 text-md w-1/2"
+            className="pl-6 text-md "
             required
           />
         </div>

@@ -23,7 +23,7 @@ export function Step2({ show, data, onUpdate }: StepProps) {
           onValueChange={(value) => onUpdate('cardCount', value)}
         >
           <SelectTrigger>
-            <SelectValue className="placeholder:text-red-500 w-1/2" placeholder="Select" />
+            <SelectValue className="placeholder:text-red-500" placeholder="Select" />
           </SelectTrigger>
           <SelectContent>
             {Array.from({ length: 10 }).map((_, i) => (

@@ -29,7 +29,7 @@ export function Step8({ show, data}: {
       <div className={`w-full h-full transition-all duration-1000 ${show ? 'block' : 'hidden'} overflow-auto flex flex-col gap-y-7 p-4 desktop:gap-y-2 items-center ${data.length ? "" : "justify-center"}`}>
         {data.length ? visibleItems.map((item) => 
           (
-            <Link key={item.cardKey} href={item.cardSignUrl} className="flex flex-col desktop:flex-row justify-stretch desktop:gap-x-5 items-center desktop:h-24 w-4/5 card-shade" target="_blank">
+            <Link key={item.cardKey} href={item.cardSignUrl} className="flex flex-col desktop:flex-row justify-stretch desktop:gap-x-5 items-center desktop:h-24 w-3/5 card-shade" target="_blank">
               <img loading="lazy" src={item.cardIconUrl} alt={"Card Image"} className="h-full"/>
               <h2 className="text-sm desktop:text-xl text-center">{item.cardName}</h2>
             </Link>
