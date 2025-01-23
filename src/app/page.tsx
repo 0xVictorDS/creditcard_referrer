@@ -127,7 +127,7 @@ export default function CreditCardWizard() {
           }
         </header>
 
-        <main className="bg-white border border-[#0000001A] rounded-xl p-6 w-full h-full transition-all duration-1000 shadow-md relative over-y overflow-auto"> 
+        <main className="bg-white border border-[#0000001A] rounded-xl p-6 w-full h-full transition-all duration-1000 shadow-md relative over-y overflow-auto min-h-[150px]"> 
           
           <Step1
             show={currentStep === 1}
