@@ -8,8 +8,8 @@ export function Step3({ show, data, onUpdate }: StepProps) {
     <div className={`w-full h-full transition-all duration-1000 ${show ? 'block' : 'hidden'}`}>
       <div className="space-y-4">
         <div className="flex items-center gap-2">
-          <Label className="text-foreground font-semibold text-base desktop:text-left after:content-['*'] after:text-red-500 after:ml-1 last-line-center">
-            Do you prefer cash back, points, or miles?
+          <Label className="text-foreground font-semibold text-base desktop:text-left last-line-center">
+            Do you prefer cash back, points, or <span className="after:content-['*'] after:text-red-500 after:ml-1 after:inline-block text-nowrap">month?</span>
           </Label>
         </div>
         <div className="flex flex-row gap-3 items-center">
@@ -20,13 +20,13 @@ export function Step3({ show, data, onUpdate }: StepProps) {
         </div>
         <Select
           value={data.rewardType}
-          onValueChange={(value: 'cashback' | 'points' | 'miles') => onUpdate('rewardType', value)}
+          onValueChange={(value: 'Cash' | 'points' | 'miles') => onUpdate('rewardType', value)}
         >
           <SelectTrigger>
             <SelectValue placeholder="Select" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="cashback">Cash Back</SelectItem>
+            <SelectItem value="Cash">Cash Back</SelectItem>
             <SelectItem value="points">Points</SelectItem>
             <SelectItem value="miles">Miles</SelectItem>
           </SelectContent>

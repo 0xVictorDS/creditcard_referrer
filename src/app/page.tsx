@@ -75,8 +75,7 @@ export default function CreditCardWizard() {
 
   const sendData = async() => {
     setIsLoading(true);
-    // const rewardTypeList = ['cashback', 'miles', 'points'];
-    const selection = ['no', 'yes']
+    const selection = ['no', 'yes'];
     const creditScoreList = ['Excellent', 'Very Good', 'Good', "Fair", "Poor"];
     const monthlySpend = parseInt(formData.monthlySpend);
     const cardCount = parseInt(formData.cardCount);
@@ -110,7 +109,7 @@ export default function CreditCardWizard() {
           <img src='Image/logo.png' className='h-fit w-1/6'/>
           <h1 className="text-2xl float-start before:content-['Customize'] before:font-[700] font-[400]"> Your card</h1>
           {currentStep === 8 ? 
-            <>
+            cardData.length ? <>
               <div className="flex items-center">
                 <Label className="text-foreground font-semibold text-base desktop:text-left last-line-center">
                   Congrats! Here Are Some Cards We Think You&apos;ll Love
@@ -123,6 +122,13 @@ export default function CreditCardWizard() {
                 <Label className="text-foreground font-medium text-sm text-center desktop:text-left">Click on a card to learn more and apply directly. Happy earning!</Label>
               </div> 
             </> : 
+            <>
+            <div className="flex items-center">
+              <Label className="text-foreground font-semibold text-base desktop:text-left last-line-center">
+                Sorry! We can&apos;t find the cards you are looking for.
+              </Label>
+            </div>
+            </> :
             <ProgressDots totalSteps={TOTAL_STEPS} currentStep={currentStep} />
           }
         </header>

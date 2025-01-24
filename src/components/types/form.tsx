@@ -1,7 +1,7 @@
 export type FormData = {
     monthlySpend: string;
     cardCount: string;
-    rewardType: 'cashback' | 'points' | 'miles' | '';
+    rewardType: 'Cash' | 'points' | 'miles' | '';
     annualFee: 'no' | 'yes' | '';
     isFreelancer: 'yes' | 'no' | '';
     travelPlans: 'yes' | 'no' | '';
