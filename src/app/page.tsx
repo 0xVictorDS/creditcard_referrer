@@ -125,9 +125,15 @@ export default function CreditCardWizard() {
             <>
             <div className="flex items-center">
               <Label className="text-foreground font-semibold text-base desktop:text-left last-line-center">
-                Sorry! We can&apos;t find the cards you are looking for.
+                We Couldn&apos;t Find a Match Right Now.
               </Label>
             </div>
+            <div className="flex flex-col gap-3">
+                <Label className="text-foreground font-medium text-sm text-center desktop:text-left">
+                  Based on your spending habits and preferences, we&apos;ve matched you with these top credit card options. They&apos;re designed to maximize your rewards and fit your lifestyle perfectly!
+                </Label>
+                <Label className="text-foreground font-medium text-sm text-center desktop:text-left">Feel free to adjust your inputs or check back later as new offers and opportunities become available.</Label>
+            </div> 
             </> :
             <ProgressDots totalSteps={TOTAL_STEPS} currentStep={currentStep} />
           }
