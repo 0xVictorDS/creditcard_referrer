@@ -20,8 +20,6 @@ export default function RootLayout({
         <div className="z-50 w-screen h-screen flex justify-center items-center">
           {children}
         </div>
-        <div className="-z-10 absolute w-screen h-screen flex justify-center items-center bg-no-repeat bg-[url(/Image/background.png)] bg-contain blur-2xl opacity-40 top-0 left-0">
-        </div>
       </body>
     </html>
   );

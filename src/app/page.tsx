@@ -102,12 +102,10 @@ export default function CreditCardWizard() {
   }
 
   return (
-    <div className={`p-6 h-full max-h-screen w-full desktop:w-4/5 flex flex-col ${isLoading ? "justify-center items-center" : "justify-between"} gap-8`}>
+    <div className={`py-16 h-full max-h-screen w-full desktop:w-4/5 flex flex-col ${isLoading ? "justify-center items-center" : "justify-between"} gap-8`}>
       {isLoading ? <PuffLoader size={200} color='blue'/> :
         <>
         <header className="flex flex-col justify-center gap-8">
-          <img src='Image/logo.png' className='h-fit w-1/6'/>
-          <h1 className="text-2xl float-start before:content-['Customize'] before:font-[700] font-[400]"> Your card</h1>
           {currentStep === 8 ? 
             cardData.length ? <>
               <div className="flex items-center">
@@ -202,7 +200,7 @@ export default function CreditCardWizard() {
               </div>
             </>
           }
-          <div className="flex flex-row justify-center gap-2 desktop:justify-end items-center mb-6">
+          <div className="flex flex-row justify-center gap-2 desktop:justify-end items-center">
             <div className="flex flex-row gap-2 w-fit">
               <Button onClick={handleBack} className={`font-bold h-9 w-fit desktop:h-14 desktop:w-36 bg-transparent gradient-text active:text-[#4286f4a0]`} disabled={currentStep === 1}>
                 <ArrowLeftIcon className="w-4 h-4" color='#06b6d4' /> &nbsp;Back
