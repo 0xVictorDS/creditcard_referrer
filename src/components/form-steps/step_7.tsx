@@ -26,7 +26,7 @@ export function Step7({ show, data, onUpdate }: StepProps) {
             <SelectValue className="text-red-500 placeholder:text-red-900" placeholder="Select" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value='excellent'>Excellent (781 ~ 850)</SelectItem>
+            <SelectItem value='Excellent'>Excellent (781 ~ 850)</SelectItem>
             <SelectItem value='Very Good'>Very Good (661 ~ 780)</SelectItem>
             <SelectItem value='Good'>Good (601 ~ 660)</SelectItem>
             <SelectItem value='Fair'>Fair (500 ~ 600)</SelectItem>

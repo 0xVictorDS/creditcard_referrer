@@ -21,5 +21,6 @@ export type FormData = {
     cardIconUrl: string,
     cardSignUrl: string,
     isReferralUrl: boolean
+    rewardContent: string;
   }
   

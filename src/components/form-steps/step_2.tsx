@@ -14,7 +14,7 @@ export function Step2({ show, data, onUpdate }: StepProps) {
         </div>
         <div className="flex flex-row gap-3 items-center">
           <Label className="text-foreground font-medium text-sm">
-            Credit Cards You&apos;ve Applied
+            Number of Credit Cards You Have Applied For
           </Label>
           <InfoCircle className="h-4 w-4 text-foreground" />
         </div>

@@ -102,8 +102,8 @@ export default function CreditCardWizard() {
   }
 
   return (
-    <div className={`py-16 h-full max-h-screen w-full desktop:w-4/5 flex flex-col ${isLoading ? "justify-center items-center" : "justify-between"} gap-8`}>
-      {isLoading ? <PuffLoader size={200} color='blue'/> :
+    <div className={`py-16 px-5  h-full max-h-screen w-full desktop:w-4/5 flex flex-col ${isLoading ? "justify-center items-center" : "justify-between"} gap-8`}>
+      {isLoading ? <PuffLoader size={200} color='#0099CC'/> :
         <>
         <header className="flex flex-col justify-center gap-8">
           {currentStep === 8 ? 
@@ -128,7 +128,7 @@ export default function CreditCardWizard() {
             </div>
             <div className="flex flex-col gap-3">
                 <Label className="text-foreground font-medium text-sm text-center desktop:text-left">
-                  Based on your spending habits and preferences, we&apos;ve matched you with these top credit card options. They&apos;re designed to maximize your rewards and fit your lifestyle perfectly!
+                Based on the information you provided, we weren’t able to find any cards that fit your spending habits and preferences. But don&apos;t worry—there are plenty of great options out there!
                 </Label>
                 <Label className="text-foreground font-medium text-sm text-center desktop:text-left">Feel free to adjust your inputs or check back later as new offers and opportunities become available.</Label>
             </div> 
@@ -206,10 +206,10 @@ export default function CreditCardWizard() {
                 <ArrowLeftIcon className="w-4 h-4" color='#06b6d4' /> &nbsp;Back
               </Button>
               <Button onClick={currentStep !== TOTAL_STEPS ? handleNext : sendData} className={`rounded-full font-bold h-9 w-fit desktop:h-14 desktop:w-36 ml-auto bg-gradient-to-r from-cyan-400 to-blue-500 ${currentStep == 8 && "hidden"}`} disabled={isNextDisabled()}>
-                {currentStep === TOTAL_STEPS ? 'Submit' : `Next`}<ArrowRightIcon className="w-4 h-4" />
+                {currentStep === TOTAL_STEPS ? 'Find My Match' : `Next`}<ArrowRightIcon className="w-4 h-4" />
               </Button>
               <Button onClick={() => setCurrentStep(1)} className={`rounded-full font-bold h-9 w-fit desktop:h-14 desktop:w-36 ml-auto bg-gradient-to-r from-cyan-400 to-blue-500 ${currentStep == 8 ? 'block' : 'hidden'}`}>
-                Return
+                Start Over
               </Button>
             </div>
           </div>
