@@ -9,7 +9,12 @@ export function Step3({ show, data, onUpdate }: StepProps) {
       <div className="space-y-4">
         <div className="flex items-center gap-2">
           <Label className="text-foreground font-semibold text-base desktop:text-left last-line-center">
-            Do you prefer cash back, points, or <span className="after:content-['*'] after:text-red-500 after:ml-1 after:inline-block text-nowrap">month?</span>
+            Do you prefer Cash Back, Points, or <span className="after:content-['*'] after:text-red-500 after:ml-1 after:inline-block text-nowrap">Miles?</span>
+          </Label>
+        </div>
+        <div className="flex flex-row gap-3 items-center">
+          <Label className="text-foreground font-medium text-sm last-line-center desktop:text-left">
+           This allows us to tailor recommendations to your preferred type of rewards, whether you want travel perks, flexible points, or simple cash back.
           </Label>
         </div>
         <div className="flex flex-row gap-3 items-center">

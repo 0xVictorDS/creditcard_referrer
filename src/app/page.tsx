@@ -128,7 +128,7 @@ export default function CreditCardWizard() {
             </div>
             <div className="flex flex-col gap-3">
                 <Label className="text-foreground font-medium text-sm text-center desktop:text-left">
-                Based on the information you provided, we weren’t able to find any cards that fit your spending habits and preferences. But don&apos;t worry—there are plenty of great options out there!
+                Based on the information you provided, we weren&apos;t able to find any cards that fit your spending habits and preferences. But don&apos;t worry—there are plenty of great options out there!
                 </Label>
                 <Label className="text-foreground font-medium text-sm text-center desktop:text-left">Feel free to adjust your inputs or check back later as new offers and opportunities become available.</Label>
             </div> 
@@ -137,7 +137,7 @@ export default function CreditCardWizard() {
           }
         </header>
 
-        <main className="bg-white border border-[#0000001A] rounded-xl p-6 w-full h-full transition-all duration-1000 shadow-md relative over-y overflow-auto min-h-[200px]"> 
+        <main className="bg-white border border-[#0000001A] rounded-xl p-6 w-full h-full transition-all duration-1000 shadow-md relative over-y overflow-auto min-h-[400px]"> 
           
           <Step1
             show={currentStep === 1}
@@ -201,12 +201,12 @@ export default function CreditCardWizard() {
             </>
           }
           <div className="flex flex-row justify-center gap-2 desktop:justify-end items-center">
-            <div className="flex flex-row gap-2 w-fit">
+            <div className="flex flex-row gap-2 w-fit mb-6">
               <Button onClick={handleBack} className={`font-bold h-9 w-fit desktop:h-14 desktop:w-36 bg-transparent gradient-text active:text-[#4286f4a0]`} disabled={currentStep === 1}>
                 <ArrowLeftIcon className="w-4 h-4" color='#06b6d4' /> &nbsp;Back
               </Button>
               <Button onClick={currentStep !== TOTAL_STEPS ? handleNext : sendData} className={`rounded-full font-bold h-9 w-fit desktop:h-14 desktop:w-36 ml-auto bg-gradient-to-r from-cyan-400 to-blue-500 ${currentStep == 8 && "hidden"}`} disabled={isNextDisabled()}>
-                {currentStep === TOTAL_STEPS ? 'Find My Match' : `Next`}<ArrowRightIcon className="w-4 h-4" />
+                {currentStep === TOTAL_STEPS ? 'Find My Match' : `Next`}<ArrowRightIcon className={`w-4 h-4 ${currentStep === TOTAL_STEPS && 'hidden'}`} />
               </Button>
               <Button onClick={() => setCurrentStep(1)} className={`rounded-full font-bold h-9 w-fit desktop:h-14 desktop:w-36 ml-auto bg-gradient-to-r from-cyan-400 to-blue-500 ${currentStep == 8 ? 'block' : 'hidden'}`}>
                 Start Over

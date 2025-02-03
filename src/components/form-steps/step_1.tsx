@@ -13,6 +13,11 @@ export function Step1({ show, data, onUpdate }: StepProps) {
           </Label>
         </div>
         <div className="flex flex-row gap-3 items-center">
+          <Label className="text-foreground font-medium text-sm last-line-center desktop:text-left">
+            This helps us recommend credit cards with sign-up bonuses and rewards that match your spending habits, ensuring you maximize benefits without overspending.
+          </Label>
+        </div>
+        <div className="flex flex-row gap-3 items-center">
           <Label className="text-foreground font-medium text-sm">
             Monthly Expectation
           </Label>

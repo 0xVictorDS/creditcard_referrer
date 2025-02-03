@@ -13,6 +13,11 @@ export function Step5({ show, data, onUpdate }: StepProps) {
           </Label>
         </div>
         <div className="flex flex-row gap-3 items-center">
+          <Label className="text-foreground font-medium text-sm last-line-center desktop:text-left">
+            If you select yes, we&apos;ll only show business credit cards, which offer great rewards on business expenses. If you want to see personal credit cards, select no instead.
+          </Label>
+        </div>
+        <div className="flex flex-row gap-3 items-center">
           <Label className="text-foreground font-medium text-sm">
             Please Select One Option
           </Label>

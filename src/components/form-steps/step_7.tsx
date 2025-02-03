@@ -12,6 +12,11 @@ export function Step7({ show, data, onUpdate }: StepProps) {
             What is your approximate credit <span className="after:content-['*'] after:text-red-500 after:ml-1 after:inline-block text-nowrap">score?</span>
           </Label>
         </div>
+        <div className="flex flex-row gap-3 items-center">
+          <Label className="text-foreground font-medium text-sm last-line-center desktop:text-left">
+            Credit cards have different approval requirements. Knowing your credit score range helps us suggest cards you’re most likely to get approved for.
+          </Label>
+        </div>
         <div className="flex flex-row gap-3 items-center ">
           <Label className="text-foreground font-medium text-sm">
             Please Select One Option
