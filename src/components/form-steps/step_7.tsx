@@ -13,10 +13,10 @@ export function Step7({ show, data, onUpdate }: StepProps) {
           </Label>
         </div>
         <div className="flex flex-row gap-3 items-center">
+          <InfoCircle className="h-4 w-4 text-foreground" />
           <Label className="text-foreground font-medium text-sm last-line-center desktop:text-left">
             Credit cards have different approval requirements. Knowing your credit score range helps us suggest cards you’re most likely to get approved for.
           </Label>
-          <InfoCircle className="h-4 w-4 text-foreground" />
         </div>
         <Select
           value={data.creditScore.toString()}

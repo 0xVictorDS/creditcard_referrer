@@ -13,10 +13,10 @@ export function Step2({ show, data, onUpdate }: StepProps) {
           </Label>
         </div>
         <div className="flex flex-row gap-3 items-center">
+          <InfoCircle className="h-4 w-4 text-foreground" />
           <Label className="text-foreground font-medium text-sm last-line-center desktop:text-left">
             Some banks have application limits (like Chase’s 5/24 rule), so this helps us filter out cards you may not be eligible for.
           </Label>
-          <InfoCircle className="h-4 w-4 text-foreground" />
         </div>
         <Select
           value={data.cardCount?.toString()}
