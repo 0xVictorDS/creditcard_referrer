@@ -16,11 +16,6 @@ export function Step4({ show, data, onUpdate }: StepProps) {
           <Label className="text-foreground font-medium text-sm last-line-center desktop:text-left">
             Some cards with annual fees offer premium benefits that outweigh the cost, while no-annual-fee cards keep things simple. We want to match you with the right fit.
           </Label>
-        </div>
-        <div className="flex flex-row gap-3 items-center">
-          <Label className="text-foreground font-medium text-sm">
-            Please Select One Option
-          </Label>
           <InfoCircle className="h-4 w-4 text-foreground" />
         </div>
         <RadioGroup

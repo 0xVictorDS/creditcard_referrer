@@ -31,7 +31,7 @@ export function Step8({ show, data}: {
           (
             <Link key={item.cardKey} href={item.cardSignUrl} className="p-3 rounded-md flex flex-col desktop:flex-row justify-stretch desktop:gap-x-5 items-center h-fit desktop:h-28 w-full desktop:w-4/5 card-shade hover:bg-[#00DFEF20]" target="_blank">
               <img loading="lazy" src={item.cardIconUrl} alt={"Card Image"} className="h-20 desktop:h-full"/>
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2 items-center justify-center w-full">
                 <h2 className="text-sm desktop:text-xl text-center">{item.cardName}</h2>
                 <p className="text-xs desktop:text-sm text-center">{item.rewardContent}</p>
               </div>

@@ -16,11 +16,6 @@ export function Step3({ show, data, onUpdate }: StepProps) {
           <Label className="text-foreground font-medium text-sm last-line-center desktop:text-left">
            This allows us to tailor recommendations to your preferred type of rewards, whether you want travel perks, flexible points, or simple cash back.
           </Label>
-        </div>
-        <div className="flex flex-row gap-3 items-center">
-          <Label className="text-foreground font-medium text-sm">
-            Please Select One Option
-          </Label>
           <InfoCircle className="h-4 w-4 text-foreground" />
         </div>
         <Select

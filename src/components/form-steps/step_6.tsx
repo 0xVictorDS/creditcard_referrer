@@ -16,11 +16,6 @@ export function Step6({ show, data, onUpdate }: StepProps) {
           <Label className="text-foreground font-medium text-sm last-line-center desktop:text-left">
             If you travel abroad, we&apos;ll prioritize cards with no foreign transaction fees, global travel perks, and rewards that help you save on flights and hotels.
           </Label>
-        </div>
-        <div className="flex flex-row gap-3 items-center ">
-          <Label className="text-foreground font-medium text-sm">
-            Please Select One Option
-          </Label>
           <InfoCircle className="h-4 w-4 text-foreground" />
         </div>
         <Select
