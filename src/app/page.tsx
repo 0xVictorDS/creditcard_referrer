@@ -105,19 +105,35 @@ export default function CreditCardWizard() {
     <div className={`py-16 px-5  h-full max-h-screen w-full desktop:w-4/5 flex flex-col ${isLoading ? "justify-center items-center" : "justify-between"} gap-8`}>
       {isLoading ? <PuffLoader size={200} color='#0099CC'/> :
         <>
-        <header className="flex flex-col justify-center gap-8">
+        <header className="flex flex-col justify-center gap-8 pt-16">
           {currentStep === 8 ? 
             cardData.length ? <>
-              <div className="flex items-center">
-                <Label className="text-foreground font-semibold text-base desktop:text-left last-line-center">
-                  Congrats! Here Are Some Cards We Think You&apos;ll Love
+                <div className="absolute top-16 left-1/2 transform -translate-x-1/2 flex items-center">
+                <Label className="text-foreground font-semibold desktop:text-left text-center whitespace-nowrap">
+                  🎉 Congrats! Here Are the Best Cards for You! 🎉
                 </Label>
               </div>
               <div className="flex flex-col gap-3">
                 <Label className="text-foreground font-medium text-sm text-center desktop:text-left">
-                  Based on your spending habits and preferences, we&apos;ve matched you with these top credit card options. They&apos;re designed to maximize your rewards and fit your lifestyle perfectly!
+                  Based on your spending and preferences, we&apos;ve curated top credit card options that maximize your rewards and benefits—whether you&apos;re earning cash back, points, or miles.
                 </Label>
-                <Label className="text-foreground font-medium text-sm text-center desktop:text-left">Click on a card to learn more and apply directly. Happy earning!</Label>
+                <div className='flex flex-col'>
+                  <Label className="text-foreground font-medium text-sm text-center desktop:text-left">
+                    💰 Boost your earnings on every purchase
+                  </Label>
+                  <Label className="text-foreground font-medium text-sm text-center desktop:text-left">
+                    ✈️ Unlock exclusive travel perks & benefits
+                  </Label>
+                  <Label className="text-foreground font-medium text-sm text-center desktop:text-left">
+                    🚀 Get the most value from your spending
+                  </Label>
+                </div>
+                <div className='flex flex-col'>
+                  <Label className="text-foreground font-medium text-sm text-center desktop:text-left">
+                    Tap on a card to explore details and apply now!
+                  </Label>
+                </div>
+                <Label className="text-foreground font-medium text-sm text-center desktop:text-left">👉 The right card can take your rewards to the next level—start earning today!</Label>
               </div> 
             </> : 
             <>
@@ -137,7 +153,7 @@ export default function CreditCardWizard() {
           }
         </header>
 
-        <main className="bg-white border border-[#0000001A] rounded-xl p-6 w-full h-full transition-all duration-1000 shadow-md relative over-y overflow-auto min-h-[400px]"> 
+        <main className="bg-white border border-[#0000001A] rounded-xl p-6 w-full h-full transition-all duration-1000 shadow-md relative overflow-auto min-h-[400px]"> 
           
           <Step1
             show={currentStep === 1}
@@ -202,13 +218,14 @@ export default function CreditCardWizard() {
           }
           <div className="flex flex-row justify-center gap-2 desktop:justify-end items-center">
             <div className="flex flex-row gap-2 w-fit mb-6">
-              <Button onClick={handleBack} className={`font-bold h-9 w-fit desktop:h-14 desktop:w-36 bg-transparent gradient-text active:text-[#4286f4a0]`} disabled={currentStep === 1}>
-                <ArrowLeftIcon className="w-4 h-4" color='#06b6d4' /> &nbsp;Back
+              <Button onClick={handleBack} className={`font-bold h-9 w-fit desktop:h-14 desktop:w-36 bg-transparent gradient-text active:text-[#5442f4] active:scale-105 hover:scale-105 transition-all duration-100 group`} disabled={currentStep === 1}>
+                <ArrowLeftIcon className="w-4 h-4 group-active:stroke-[#5442f4]" color='#06b6d4' /> &nbsp;Back
               </Button>
-              <Button onClick={currentStep !== TOTAL_STEPS ? handleNext : sendData} className={`rounded-full font-bold h-9 w-fit desktop:h-14 desktop:w-36 ml-auto bg-gradient-to-r from-cyan-400 to-blue-500 ${currentStep == 8 && "hidden"}`} disabled={isNextDisabled()}>
-                {currentStep === TOTAL_STEPS ? 'Find My Match' : `Next`}<ArrowRightIcon className={`w-4 h-4 ${currentStep === TOTAL_STEPS && 'hidden'}`} />
+              <Button onClick={currentStep !== TOTAL_STEPS ? handleNext : sendData} className={`rounded-full font-bold h-9 w-fit desktop:h-14 desktop:w-36 ml-auto bg-gradient-to-r from-cyan-400 to-blue-500 ${currentStep == 8 && "hidden"} active:bg-gradient-to-r active:from-cyan-300 active:to-blue-700 active:scale-110 hover:scale-105 transition-all duration-100`} disabled={isNextDisabled()}>
+                {currentStep === TOTAL_STEPS ? 'Find My Match' : `Next`}
+                <ArrowRightIcon className={`w-4 h-4 ${currentStep === TOTAL_STEPS && 'hidden'}`}  />
               </Button>
-              <Button onClick={() => setCurrentStep(1)} className={`rounded-full font-bold h-9 w-fit desktop:h-14 desktop:w-36 ml-auto bg-gradient-to-r from-cyan-400 to-blue-500 ${currentStep == 8 ? 'block' : 'hidden'}`}>
+              <Button onClick={() => setCurrentStep(1)} className={`rounded-full font-bold h-9 w-fit desktop:h-14 desktop:w-36 ml-auto bg-gradient-to-r from-cyan-400 to-blue-500 ${currentStep == 8 ? 'block' : 'hidden'}  active:bg-gradient-to-r active:from-cyan-300 active:to-blue-700 active:scale-105 hover:scale-105 transition-all duration-100`}>
                 Start Over
               </Button>
             </div>

@@ -13,8 +13,8 @@ export function Step4({ show, data, onUpdate }: StepProps) {
           </Label>
         </div>
         <div className="flex flex-row gap-3 items-center">
-          <InfoCircle className="h-4 w-4 text-foreground" />
-          <Label className="text-foreground font-medium text-sm last-line-center desktop:text-left">
+          <Label className="text-foreground font-medium text-sm last-line-center tablet:text-left">
+            <InfoCircle className="h-4 w-4 text-foreground inline mr-2" />
             Some cards with annual fees offer premium benefits that outweigh the cost, while no-annual-fee cards keep things simple. We want to match you with the right fit.
           </Label>
         </div>

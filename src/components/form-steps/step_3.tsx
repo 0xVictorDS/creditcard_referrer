@@ -13,9 +13,9 @@ export function Step3({ show, data, onUpdate }: StepProps) {
           </Label>
         </div>
         <div className="flex flex-row gap-3 items-center">
-          <InfoCircle className="h-4 w-4 text-foreground" />
-          <Label className="text-foreground font-medium text-sm last-line-center desktop:text-left">
-           This allows us to tailor recommendations to your preferred type of rewards, whether you want travel perks, flexible points, or simple cash back.
+          <Label className="text-foreground font-medium text-sm last-line-center tablet:text-left">
+            <InfoCircle className="h-4 w-4 text-foreground inline mr-2" />
+            This allows us to tailor recommendations to your preferred type of rewards, whether you want travel perks, flexible points, or simple cash back.
           </Label>
         </div>
         <Select

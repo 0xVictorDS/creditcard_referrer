@@ -26,12 +26,12 @@ export function Step8({ show, data}: {
     }, [data]);
 
   return (
-      <div className={`w-full h-96 transition-all duration-1000 ${show ? 'block' : 'hidden'} overflow-auto flex flex-col gap-y-7 p-4 desktop:gap-y-5 items-center ${data.length ? "" : "justify-center"}`}>
+      <div className={`w-full h-fit transition-all duration-1000 ${show ? 'block' : 'hidden'} flex flex-col gap-y-7 p-4 desktop:gap-y-5 items-center ${data.length ? "" : "justify-center"}`}>
         {data.length ? visibleItems.map((item) => 
           (
-            <Link key={item.cardKey} href={item.cardSignUrl} className="p-3 rounded-md flex flex-col desktop:flex-row justify-stretch desktop:gap-x-5 items-center h-fit desktop:h-28 w-full desktop:w-4/5 card-shade hover:bg-[#00DFEF20]" target="_blank">
-              <img loading="lazy" src={item.cardIconUrl} alt={"Card Image"} className="h-20 desktop:h-full"/>
-              <div className="flex flex-col gap-2 items-center justify-center w-full">
+            <Link key={item.cardKey} href={item.cardSignUrl} className="p-3 rounded-md flex flex-col tablet:flex-row desktop:flex-row desktop:gap-x-5 items-center h-fit desktop:h-28 w-full tablet:w-5/6 desktop:w-4/5 card-shade hover:bg-[#00DFEF20] gap-3" target="_blank">
+              <img loading="lazy" src={item.cardIconUrl} alt={"Card Image"} className="h-20"/>
+              <div className="flex flex-col gap-2 items-center justify-center w-full h-fit">
                 <h2 className="text-sm desktop:text-xl text-center">{item.cardName}</h2>
                 <p className="text-xs desktop:text-sm text-center">{item.rewardContent}</p>
               </div>
